@@ -1,0 +1,25 @@
+#contactBox{
+    width: 267px;
+height: fit-content;
+padding: 12px;
+display: flex;
+flex-direction: column;
+gap: 0px;
+border-radius: 12px;
+justify-content: space-between;
+background-color: var(--black-color);
+
+}
+#contactContainer{
+  width: 243px;
+height: fit-content;
+display: flex;
+gap: 8px;
+color: var(--white-color);
+font-family: 'Poppins';
+font-size: 10px;
+font-weight: 400;
+line-height: 15px;
+text-align: left;
+
+}

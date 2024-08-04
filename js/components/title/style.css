@@ -1,0 +1,13 @@
+.title {
+    font-family: 'PoppinsBold';
+display: flex;
+    gap: 2px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+}
+.whiteTitle {
+    font-family: 'PoppinsMedium';
+    color: var(--white-color);
+}

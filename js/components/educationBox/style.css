@@ -1,0 +1,81 @@
+:root {
+}
+
+#educationBox {
+    width: 268px;
+    height: fit-content;
+    padding: 12px;
+    gap: 16px;
+    border-radius: 12px;
+    background-color: var(--container-bg-color);
+}
+
+
+#containerEducations {
+    gap: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+
+.education {
+    width: 116px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    gap: 8px;
+    border-radius: 10px;
+    font-family: 'PoppinsMedium';
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 15px;
+    text-align: left;
+    background-color: var(--white-color);
+    overflow: hidden;
+}
+
+
+#topBar {
+    display: flex;
+    justify-content: space-between;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+}
+
+#listTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    font-family: 'Poppins';
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 12px;
+}
+.greenText{
+    color: var(--green2-color);
+}
+
+#like {
+    width: 11px;
+    height: 9.39px;
+}
+.dispNone{
+    display: none;
+}
+
+.greenFone{
+    background-color: var(--green-color);
+    color: var(--white-color);
+}
+.school {
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 12px;
+
+}

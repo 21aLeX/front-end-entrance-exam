@@ -1,0 +1,65 @@
+#toolsBox {
+    width: 124px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 12px;
+    padding: 12px;
+    background-color: var(--container-bg-color);
+
+}
+
+#toolsContainer {
+    width: 76px;
+    height: fit-content;
+    top: 48px;
+    left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 auto;
+}
+
+#contentTools {
+    width: 76px;
+    height: fit-content;
+    padding: 16px 9px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    border-radius: 6px;
+    background-color: var(--white-color);
+}
+
+#tools {
+    width: 21px;
+    height: 20px;
+
+    object-fit: contain;
+}
+
+.nameTools {
+    width: fit-content;
+    height: 11px;
+    padding: 2px 6px 2px 6px;
+    position: absolute;
+    top: 2px;
+    /* Перемещаем элемент на 50% от верхнего края родителя */
+    left: 50%;
+    /* Перемещаем элемент на 50% от левого края родителя */
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+    border-radius: 59px;
+    font-family: 'PoppinsBold';
+    font-size: 5px;
+    font-weight: 500;
+    line-height: 7.1px;
+    text-align: center;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    white-space: nowrap;
+}

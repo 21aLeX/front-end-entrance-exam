@@ -1,0 +1,115 @@
+#experienceBox {
+    width: 411px;
+    height: fit-content;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 12px;
+    background-color: var(--container-bg-color);
+}
+
+#listJob {
+    width: 387px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+#contentJob {
+    width: 387px;
+    height: fit-content;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 10px;
+    background-color: var(--white-color);
+}
+
+#contentJob[data-last='true']  {
+    color: var(--white-color);
+    background-color: var(--green-color);
+}
+
+#containerTitleJob {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'PoppinsBold';
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 12px;
+    text-align: center;
+
+}
+
+#containerInfo {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    gap: 8px;
+}
+
+#jobInfo {
+    min-width: 124px;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.roleJob {
+    font-family: 'PoppinsBold';
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 15px;
+    text-align: center;
+
+}
+
+#aboutJob {
+    display: flex;
+    gap: 6px;
+
+}
+
+.company {
+    font-family: 'Poppins';
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: center;
+}
+
+#containerPoint {
+    display: flex;
+    flex-direction: column;
+    font-family: 'PoppinsMedium';
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+
+}
+#tagLast {
+    width: 61px;
+height:fit-content;
+padding: 2px;
+display: flex;
+gap: 0px;
+border-radius: 59px;
+justify-content: center;
+font-family: 'Poppins';
+font-size: 8px;
+font-weight: 500;
+line-height: 12.4px;
+text-align: center;
+color: var(--yellow-color);
+background-color: var(--green3-color);
+
+}
