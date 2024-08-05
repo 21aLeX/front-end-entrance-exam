@@ -1,8 +1,8 @@
 #experienceBox {
-    width: 411px;
-    height: fit-content;
+   min-width: 411px;
     padding: 12px;
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: 16px;
     border-radius: 12px;
@@ -37,7 +37,7 @@
 #containerTitleJob {
     display: flex;
     justify-content: space-between;
-    font-family: 'PoppinsBold';
+    font-family: 'PoppinsMedium';
     font-size: 8px;
     font-weight: 500;
     line-height: 12px;

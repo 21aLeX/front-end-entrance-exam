@@ -1,22 +1,25 @@
 #extraBox{
-    width: 267px;
+    min-width: 267px;
+    flex: 1;
 height:fit-content;
 display: flex;
 flex-direction: column;
 gap: 20px;
 }
 #interestsBlock{
-    width: 267px;
+    min-width: 267px;
 height: fit-content;
 padding: 12px;
 display: flex;
 flex-direction: column;
+flex: 1;
 gap: 16px;
 border-radius: 12px;
     background-color: var(--container-bg-color);
 }
 #interestsBox{
-width: 243px;
+min-width: 243px;
+flex: 1;
 height: fit-content;
 display: flex;
 flex-wrap: wrap;

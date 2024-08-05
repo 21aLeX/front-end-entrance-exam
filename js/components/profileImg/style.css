@@ -1,0 +1,14 @@
+
+
+#profileImg {
+  width: 124px;
+  height: 124px;
+  border-radius: 12px;
+  padding: 12px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--container-bg-color);
+}
+
+

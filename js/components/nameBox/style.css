@@ -1,0 +1,39 @@
+#nameBox {
+  font-family: "Poppins";
+  width: 124px;
+  height: 124px;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  background-color: var(--container-bg-color);
+}
+
+#textHello {
+  font-family: 'PoppinsBold';
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 15px;
+}
+
+#yourInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#name {
+  font-family: 'PoppinsBold';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14.56px;
+}
+
+#role {
+  font-family: 'Poppins';
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}

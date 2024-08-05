@@ -1,3 +1,5 @@
+import "./style.css";
+
 const NameBox = () => {
   const nameBox = document.createElement("div");
   nameBox.setAttribute("id", "nameBox");

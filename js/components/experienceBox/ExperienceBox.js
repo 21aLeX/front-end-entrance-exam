@@ -62,6 +62,7 @@ const ExperienceBox = () => {
       // тег последней работы
       const tagLast = document.createElement("div");
       tagLast.setAttribute("id", "tagLast");
+      tagLast.setAttribute("data-edit", true);
       tagLast.textContent = sessionStorage.getItem(`tagLast`) ?? "most recent";
       containerTitleJob.appendChild(tagLast);
     }

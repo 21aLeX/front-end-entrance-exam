@@ -1,6 +1,3 @@
-:root {
-}
-
 #educationBox {
     width: 268px;
     height: fit-content;
@@ -13,6 +10,7 @@
 
 #containerEducations {
     gap: 12px;
+    padding-top: 12px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -24,6 +22,7 @@
     width: 116px;
     height: fit-content;
     display: flex;
+    position: relative;
     flex-direction: column;
     padding: 8px;
     gap: 8px;
@@ -35,6 +34,10 @@
     text-align: left;
     background-color: var(--white-color);
     overflow: hidden;
+}
+.education:not(.greenFone):hover{
+    
+      background: rgba(5, 5, 5, 0.1);
 }
 
 
@@ -61,7 +64,7 @@
     color: var(--green2-color);
 }
 
-#like {
+.like {
     width: 11px;
     height: 9.39px;
 }

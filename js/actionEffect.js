@@ -1,28 +1,32 @@
 const actionEffect = (element) => {
   const action = (e) => {
     
-        const ripple = document.createElement("span");
-        ripple.className = "wave-effect";
-        const size = Math.max(element.offsetWidth, element.offsetHeight) * 2;
+      const button = e.currentTarget;
 
-        ripple.style.width = `${size}px`;
-        ripple.style.height = `${size}px`;
-        ripple.style.top = "50%";
-        ripple.style.left = "50%";
-        ripple.style.transform = "translate(-50%, -50%)";
+      // Создаем элемент волны
+      const ripple = document.createElement("span");
+      ripple.classList.add("ripple");
 
-        element.appendChild(ripple);
+      // Получаем позицию клика относительно кнопки
+      const rect = button.getBoundingClientRect();
+      const rippleX = e.clientX - rect.left;
+      const rippleY = e.clientY - rect.top;
 
-        const rect = element.getBoundingClientRect();
-        const mouseX = e.clientX - rect.left;
-        const mouseY = e.clientY - rect.top;
+      // Устанавливаем позицию и размеры волны
+      ripple.style.left = `${rippleX}px`;
+      ripple.style.top = `${rippleY}px`;
+      ripple.style.width = ripple.style.height = `${Math.max(
+        button.clientWidth,
+        button.clientHeight
+      )}px`;
 
-        ripple.style.top = `${mouseY - size / 2}px`;
-        ripple.style.left = `${mouseX - size / 2}px`;
+      // Добавляем волну в кнопку
+      button.appendChild(ripple);
 
-        setTimeout(() => {
-          ripple.remove();
-        }, 500);
+      // Удаляем волну после завершения анимации
+      ripple.addEventListener("animationend", () => {
+        ripple.remove();
+      });
   };
   element.addEventListener("click", action);
 };

@@ -34,6 +34,7 @@ const dataEducations = [
 const clickLike = (event) => {
   const element = event.currentTarget;
   element.querySelector("#like").classList.toggle("dispNone");
+  element.querySelector("#noLike").classList.toggle("dispNone");
   element.querySelector("#listTags").classList.toggle("greenFone");
   element.classList.toggle("greenFone");
 };
@@ -67,7 +68,11 @@ const EducationBox = () => {
     const like = document.createElement("div");
     like.style.backgroundImage = `url(/like.png)`;
     like.setAttribute("id", "like");
-    like.classList.add("dispNone");
+    like.classList.add("dispNone", "like");
+    const noLike = document.createElement("div");
+    noLike.style.backgroundImage = `url(/noLike.png)`;
+    noLike.setAttribute("id", "noLike");
+    noLike.classList.add("like");
     // контейнер контента
     const content = document.createElement("div");
     content.setAttribute("id", "content");
@@ -97,6 +102,7 @@ const EducationBox = () => {
 
     topBar.appendChild(date);
     topBar.appendChild(like);
+    topBar.appendChild(noLike);
     content.appendChild(newName);
     content.appendChild(listTags);
     education.appendChild(topBar);

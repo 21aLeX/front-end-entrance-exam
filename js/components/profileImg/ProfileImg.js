@@ -1,3 +1,4 @@
+import "./style.css";
 const ProfileImg = () => {
   const img = document.createElement("div");
   img.style.backgroundImage = `url(/profileImg.png)`;

@@ -1,0 +1,42 @@
+
+#languages {
+  min-width: 267px;
+  flex: 1;
+  height: 124px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 12px;
+  background-color: var(--container-bg-color);
+}
+
+
+#listLanguages {
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+}
+
+#listNameLanguages {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  font-family: 'PoppinsBold';
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 10.4px;
+  text-align: left;
+}
+
+#listLevelLanguages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#newLevelLanguage {
+  border-radius: 3px;
+  height: 11px;
+  background-color: var(--green-color);
+}

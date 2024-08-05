@@ -2,16 +2,16 @@ import "../css/style.css";
 import javascriptLogo from "../javascript.svg";
 import viteLogo from "/vite.svg";
 import { setupCounter } from "./counter.js";
-import ProfileImg from "./components/ProfileImg.js";
-import NameBox from "./components/NameBox.js";
+import ProfileImg from "./components/profileImg/ProfileImg.js";
+import NameBox from "./components/nameBox/NameBox.js";
 import editText from "./editText.js";
-import Languages from "./components/Languages.js";
+import Languages from "./components/languages/Languages.js";
 import EducationBox from "./components/educationBox/EducationBox.js";
 import ExtraBox from "./components/extraBox/ExtraBox.js";
-import ToolsBox from "./components/toolsBox/ToolsBox";
+import ToolsBox from "./components/toolsBox/ToolsBox.js";
 import ExperienceBox from "./components/experienceBox/ExperienceBox.js";
-
-   import jsPDF from "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 const fragment = document.querySelector("#app");
 // .innerHTML = `
@@ -36,19 +36,39 @@ fragment.appendChild(ExtraBoxComponent);
 fragment.appendChild(ToolsBoxComponent);
 fragment.appendChild(ExperienceBoxComponent);
 
-const button = document.createElement("button");
-button.textContent = "Печать";
-var doc = new jsPDF();
-button.addEventListener("click", () => {
-//   var element = document.getElementById("content"); // Замените 'content' на id вашего HTML контейнера
-  doc.html(fragment, {
-    callback: function (doc) {
-      doc.save("output.pdf"); // Сохраняем PDF файл с именем 'output.pdf'
-    },
+// кнопка для скачивания
+const buttonDownload = document.createElement("button");
+buttonDownload.setAttribute("id", "buttonDownload");
+buttonDownload.textContent = "Скачать";
+buttonDownload.addEventListener("click", () => {
+  buttonDownload.style.display = "none";
+  // снимок
+  html2canvas(fragment).then((canvas) => {
+    const imgData = canvas.toDataURL("image/png");
+    const pdf = new jsPDF("p", "mm", "a4");
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = pdf.internal.pageSize.getHeight();
+    const imgWidth = pdfWidth;
+    const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    let heightLeft = imgHeight;
+    let position = 0;
+
+    pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+    heightLeft -= pdfHeight;
+
+    while (heightLeft > 0) {
+      position = heightLeft - imgHeight;
+      pdf.addPage();
+      pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+      heightLeft -= pdfHeight;
+    }
+    // скачиваем файл
+    pdf.save("example.pdf");
+    buttonDownload.style.display = "block";
   });
 });
-fragment.appendChild(button);
-// setupCounter(document.querySelector("#counter"));
+fragment.appendChild(buttonDownload);
+
 editText(fragment);
 
 // <a href="https://vitejs.dev" target="_blank">

@@ -1,3 +1,4 @@
+import actionEffect from "../../actionEffect";
 import Title from "../title/Title";
 import "./style.css";
 
@@ -18,7 +19,8 @@ const ContactBox = () => {
   const contactBox = document.createElement("div");
   contactBox.setAttribute("id", "contactBox");
   // заголовок контактов
-  const title = Title('contact',
+  const title = Title(
+    "contact",
     "Let´s chat! I´m ready to work on excinting projects",
     "white"
   );
@@ -30,16 +32,19 @@ const ContactBox = () => {
   email.setAttribute("id", "email");
   email.setAttribute("data-edit", true);
   email.textContent = sessionStorage.getItem("email") ?? "ivann19bj@gmail.com";
+  actionEffect(email);
   // разделитель
   const delimeter = document.createElement("div");
   delimeter.setAttribute("id", "delimeter");
   delimeter.setAttribute("data-edit", true);
   delimeter.textContent = sessionStorage.getItem("delimeter") ?? "|";
+  actionEffect(delimeter);
   // телефон
   const phone = document.createElement("div");
   phone.setAttribute("id", "phone");
   phone.setAttribute("data-edit", true);
   phone.textContent = sessionStorage.getItem("phone") ?? "+34 666 666 666";
+  actionEffect(phone);
 
   contactContainer.appendChild(email);
   contactContainer.appendChild(delimeter);

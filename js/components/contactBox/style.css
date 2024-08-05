@@ -1,8 +1,9 @@
 #contactBox{
-    width: 267px;
+    min-width: 267px;
 height: fit-content;
 padding: 12px;
 display: flex;
+flex: 1;
 flex-direction: column;
 gap: 0px;
 border-radius: 12px;
@@ -11,7 +12,8 @@ background-color: var(--black-color);
 
 }
 #contactContainer{
-  width: 243px;
+  min-width: 243px;
+  flex: 1;
 height: fit-content;
 display: flex;
 gap: 8px;

@@ -2,13 +2,14 @@ const editText = (element) => {
   const editTextElem = (event) => {
     const element = event.target;
     if (element.dataset.edit) {
-      element.addEventListener(
-        "click",
-        (() => {
+      // element.addEventListener(
+        // "click",
+        // (() => {
+          event.stopPropagation();
           element.setAttribute("contenteditable", "true");
           element.focus();
-        })()
-      );
+        // })()
+      // );
 
       element.addEventListener("blur", () => {
     console.log(element.id);

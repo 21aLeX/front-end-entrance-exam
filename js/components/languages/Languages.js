@@ -1,4 +1,5 @@
-import Title from "./title/Title";
+import Title from "../title/Title";
+import "./style.css";
 
 const dataLanguages = {
   English: 184,
