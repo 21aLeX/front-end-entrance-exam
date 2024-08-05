@@ -1,6 +1,6 @@
 # Шаблон резюме
 
-Demo [**Resume**](https://front-end-entrance-exam.vercel.app/)
+[**Demo**](https://front-end-entrance-exam.vercel.app/)
 
 ## Установка
 
