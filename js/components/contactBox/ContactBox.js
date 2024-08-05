@@ -2,19 +2,6 @@ import actionEffect from "../../actionEffect";
 import Title from "../title/Title";
 import "./style.css";
 
-const dataInterests = [
-  "branding",
-  "brand identity",
-  "logo",
-  "typography",
-  "photography",
-  "designing",
-  "poster design",
-  "research",
-  "social networks",
-  "illustration",
-];
-
 const ContactBox = () => {
   const contactBox = document.createElement("div");
   contactBox.setAttribute("id", "contactBox");

@@ -1,3 +1,4 @@
+import actionEffect from "../../actionEffect";
 import Title from "../title/Title";
 import "./style.css";
 
@@ -55,6 +56,7 @@ const ExperienceBox = () => {
     titleJob.setAttribute("id", `titleJob${date}`);
     titleJob.classList.add("titleJob");
     titleJob.setAttribute("data-edit", true);
+    actionEffect(titleJob);
     titleJob.textContent = sessionStorage.getItem(`titleJob${date}`) ?? date;
     containerTitleJob.appendChild(titleJob);
     if (index === 0) {
@@ -63,6 +65,7 @@ const ExperienceBox = () => {
       const tagLast = document.createElement("div");
       tagLast.setAttribute("id", "tagLast");
       tagLast.setAttribute("data-edit", true);
+      actionEffect(tagLast);
       tagLast.textContent = sessionStorage.getItem(`tagLast`) ?? "most recent";
       containerTitleJob.appendChild(tagLast);
     }
@@ -77,6 +80,7 @@ const ExperienceBox = () => {
     roles.setAttribute("id", `${role}Role`);
     roles.classList.add("roleJob");
     roles.setAttribute("data-edit", true);
+    actionEffect(roles);
     roles.textContent = sessionStorage.getItem(`${role}Role`) ?? role;
     // о компании
     const aboutJob = document.createElement("div");
@@ -86,6 +90,7 @@ const ExperienceBox = () => {
     companys.setAttribute("id", `${company}Company`);
     companys.classList.add("company");
     companys.setAttribute("data-edit", true);
+    actionEffect(companys);
     companys.textContent =
       sessionStorage.getItem(`${company}Company`) ?? company;
     aboutJob.appendChild(companys);
@@ -95,12 +100,14 @@ const ExperienceBox = () => {
       delimeter.setAttribute("id", "companyDelimeter");
       delimeter.classList.add("company");
       delimeter.setAttribute("data-edit", true);
+      actionEffect(delimeter);
       delimeter.textContent = sessionStorage.getItem("companyDelimeter") ?? "|";
       // время
       const times = document.createElement("div");
       times.setAttribute("id", `${time}Time`);
       times.classList.add("company");
       times.setAttribute("data-edit", true);
+      actionEffect(times);
       times.textContent = sessionStorage.getItem(`${time}Time`) ?? time;
       aboutJob.appendChild(delimeter);
       aboutJob.appendChild(times);
@@ -113,6 +120,7 @@ const ExperienceBox = () => {
       const itemPoint = document.createElement("li");
       itemPoint.setAttribute("id", `${index}${company}Point`);
       itemPoint.setAttribute("data-edit", true);
+      actionEffect(itemPoint);
       itemPoint.textContent =
         sessionStorage.getItem(`${index}${company}Point`) ?? poin;
       containerPoint.appendChild(itemPoint);

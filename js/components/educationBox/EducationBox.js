@@ -1,6 +1,7 @@
 import actionEffect from "../../actionEffect";
 import Title from "../title/Title";
 import "./style.css";
+
 const dataEducations = [
   {
     age: "2024",
@@ -32,20 +33,21 @@ const dataEducations = [
 ];
 
 const clickLike = (event) => {
-  const element = event.currentTarget;
-  element.querySelector("#like").classList.toggle("dispNone");
-  element.querySelector("#noLike").classList.toggle("dispNone");
-  element.querySelector("#listTags").classList.toggle("greenFone");
-  element.classList.toggle("greenFone");
+  if (!event.target.hasAttribute("data-edit")) {
+    const element = event.currentTarget;
+    element.querySelector("#like").classList.toggle("dispNone");
+    element.querySelector("#noLike").classList.toggle("dispNone");
+    element.querySelector("#listTags").classList.toggle("greenFone");
+    element.classList.toggle("greenFone");
+  }
 };
 const EducationBox = () => {
   const educationBox = document.createElement("div");
   educationBox.setAttribute("id", "educationBox");
   // заголовок образований
   const title = Title("Education");
-
   educationBox.appendChild(title);
-  // контейнер
+  // контейнер общий
   const containerEducations = document.createElement("div");
   containerEducations.setAttribute("id", `containerEducations`);
 
@@ -63,6 +65,7 @@ const EducationBox = () => {
     const date = document.createElement("div");
     date.setAttribute("id", age);
     date.setAttribute("data-edit", true);
+    actionEffect(date);
     date.textContent = sessionStorage.getItem(age) ?? age;
     // лайк
     const like = document.createElement("div");
@@ -80,6 +83,7 @@ const EducationBox = () => {
     const newName = document.createElement("div");
     newName.setAttribute("id", name);
     newName.setAttribute("data-edit", true);
+    actionEffect(newName);
     newName.textContent = sessionStorage.getItem(name) ?? name;
     // список тегов
     const listTags = document.createElement("div");
@@ -90,6 +94,7 @@ const EducationBox = () => {
       const tag = document.createElement("div");
       tag.setAttribute("id", t);
       tag.setAttribute("data-edit", true);
+      actionEffect(tag);
       tag.textContent = sessionStorage.getItem(t) ?? t;
       listTags.appendChild(tag);
     });
@@ -99,6 +104,7 @@ const EducationBox = () => {
     nameSchool.setAttribute("data-edit", true);
     nameSchool.classList.add("school");
     nameSchool.textContent = sessionStorage.getItem(school) ?? school;
+    actionEffect(nameSchool);
 
     topBar.appendChild(date);
     topBar.appendChild(like);

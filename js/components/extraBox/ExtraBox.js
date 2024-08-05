@@ -1,3 +1,4 @@
+import actionEffect from "../../actionEffect";
 import ContactBox from "../contactBox/ContactBox";
 import Title from "../title/Title";
 import "./style.css";
@@ -32,6 +33,7 @@ const ExtraBox = () => {
     newInterest.setAttribute("id", interest);
     newInterest.classList.add("interest");
     newInterest.setAttribute("data-edit", true);
+    actionEffect(newInterest);
     newInterest.textContent = sessionStorage.getItem(interest) ?? interest;
     interestsBox.appendChild(newInterest);
   });

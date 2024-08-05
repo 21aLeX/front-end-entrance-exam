@@ -1,7 +1,4 @@
 import "../css/style.css";
-import javascriptLogo from "../javascript.svg";
-import viteLogo from "/vite.svg";
-import { setupCounter } from "./counter.js";
 import ProfileImg from "./components/profileImg/ProfileImg.js";
 import NameBox from "./components/nameBox/NameBox.js";
 import editText from "./editText.js";
@@ -13,13 +10,9 @@ import ExperienceBox from "./components/experienceBox/ExperienceBox.js";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
-const fragment = document.querySelector("#app");
-// .innerHTML = `
-//   <div>
+const app = document.querySelector("#app");
 
-//   </div>
-// `
-
+// добавляем компоненты на страницу
 const ProfileImgComponent = ProfileImg();
 const NameBoxComponent = NameBox();
 const LanguageComponent = Languages();
@@ -28,13 +21,13 @@ const ExtraBoxComponent = ExtraBox();
 const ToolsBoxComponent = ToolsBox();
 const ExperienceBoxComponent = ExperienceBox();
 
-fragment.appendChild(ProfileImgComponent);
-fragment.appendChild(NameBoxComponent);
-fragment.appendChild(LanguageComponent);
-fragment.appendChild(EducationBoxComponent);
-fragment.appendChild(ExtraBoxComponent);
-fragment.appendChild(ToolsBoxComponent);
-fragment.appendChild(ExperienceBoxComponent);
+app.appendChild(ProfileImgComponent);
+app.appendChild(NameBoxComponent);
+app.appendChild(LanguageComponent);
+app.appendChild(EducationBoxComponent);
+app.appendChild(ExtraBoxComponent);
+app.appendChild(ToolsBoxComponent);
+app.appendChild(ExperienceBoxComponent);
 
 // кнопка для скачивания
 const buttonDownload = document.createElement("button");
@@ -43,7 +36,7 @@ buttonDownload.textContent = "Скачать";
 buttonDownload.addEventListener("click", () => {
   buttonDownload.style.display = "none";
   // снимок
-  html2canvas(fragment).then((canvas) => {
+  html2canvas(app).then((canvas) => {
     const imgData = canvas.toDataURL("image/png");
     const pdf = new jsPDF("p", "mm", "a4");
     const pdfWidth = pdf.internal.pageSize.getWidth();
@@ -67,20 +60,6 @@ buttonDownload.addEventListener("click", () => {
     buttonDownload.style.display = "block";
   });
 });
-fragment.appendChild(buttonDownload);
+app.appendChild(buttonDownload);
 
-editText(fragment);
-
-// <a href="https://vitejs.dev" target="_blank">
-//   <img src="${viteLogo}" class="logo" alt="Vite logo" />
-// </a>
-// <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-//   <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-// </a>
-// <h1>Hello Vite!</h1>
-// <div class="card">
-//   <button id="counter" type="button"></button>
-// </div>
-// <p class="read-the-docs">
-//   Click on the Vite logo to learn more
-// </p>
+editText(app);

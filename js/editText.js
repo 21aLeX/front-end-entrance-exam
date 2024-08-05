@@ -2,17 +2,11 @@ const editText = (element) => {
   const editTextElem = (event) => {
     const element = event.target;
     if (element.dataset.edit) {
-      // element.addEventListener(
-        // "click",
-        // (() => {
-          event.stopPropagation();
-          element.setAttribute("contenteditable", "true");
-          element.focus();
-        // })()
-      // );
+      event.stopPropagation();
+      element.setAttribute("contenteditable", "true");
+      element.focus();
 
-      element.addEventListener("blur", () => {
-    console.log(element.id);
+      element.addEventListener("blur", () => {     
         element.setAttribute("contenteditable", "false");
         sessionStorage.setItem(`${element.id}`, element.textContent);
       });

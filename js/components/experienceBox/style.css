@@ -1,5 +1,5 @@
 #experienceBox {
-   min-width: 411px;
+    min-width: 411px;
     padding: 12px;
     display: flex;
     flex: 1;
@@ -15,7 +15,6 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-
 }
 
 #contentJob {
@@ -29,7 +28,7 @@
     background-color: var(--white-color);
 }
 
-#contentJob[data-last='true']  {
+#contentJob[data-last='true'] {
     color: var(--white-color);
     background-color: var(--green-color);
 }
@@ -42,7 +41,6 @@
     font-weight: 500;
     line-height: 12px;
     text-align: center;
-
 }
 
 #containerInfo {
@@ -65,13 +63,11 @@
     font-weight: 500;
     line-height: 15px;
     text-align: center;
-
 }
 
 #aboutJob {
     display: flex;
     gap: 6px;
-
 }
 
 .company {
@@ -94,22 +90,21 @@
     margin: 0;
     padding: 0;
     margin-left: 10px;
-
 }
+
 #tagLast {
     width: 61px;
-height:fit-content;
-padding: 2px;
-display: flex;
-gap: 0px;
-border-radius: 59px;
-justify-content: center;
-font-family: 'Poppins';
-font-size: 8px;
-font-weight: 500;
-line-height: 12.4px;
-text-align: center;
-color: var(--yellow-color);
-background-color: var(--green3-color);
-
+    height: fit-content;
+    padding: 2px;
+    display: flex;
+    gap: 0px;
+    border-radius: 59px;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 12.4px;
+    text-align: center;
+    color: var(--yellow-color);
+    background-color: var(--green3-color);
 }

@@ -8,7 +8,6 @@
     border-radius: 12px;
     padding: 12px;
     background-color: var(--container-bg-color);
-
 }
 
 #toolsContainer {
@@ -38,7 +37,6 @@
 #tools {
     width: 21px;
     height: 20px;
-
     object-fit: contain;
 }
 
@@ -48,9 +46,7 @@
     padding: 2px 6px 2px 6px;
     position: absolute;
     top: 2px;
-    /* Перемещаем элемент на 50% от верхнего края родителя */
     left: 50%;
-    /* Перемещаем элемент на 50% от левого края родителя */
     transform: translate(-50%, -50%);
     display: flex;
     gap: 10px;

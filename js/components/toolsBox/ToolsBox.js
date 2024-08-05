@@ -1,3 +1,4 @@
+import actionEffect from "../../actionEffect";
 import Title from "../title/Title";
 import "./style.css";
 const dataImg = {
@@ -38,8 +39,9 @@ const ToolsBox = () => {
     const nameTools = document.createElement("div");
     nameTools.setAttribute("id", `nameTools${key}`);
     nameTools.classList.add("nameTools");
-      nameTools.setAttribute("data-edit", true);
-      nameTools.textContent = sessionStorage.getItem(`nameTools${key}`) ?? key;
+    nameTools.setAttribute("data-edit", true);
+    actionEffect(nameTools);
+    nameTools.textContent = sessionStorage.getItem(`nameTools${key}`) ?? key;
     contentTools.appendChild(nameTools);
     arrSrc.forEach((src) => {
       //  инструмент
@@ -50,24 +52,10 @@ const ToolsBox = () => {
     });
     toolsContainer.appendChild(contentTools);
   });
-  //   // разделитель
-  //   const delimeter = document.createElement("div");
-  //   delimeter.setAttribute("id", "delimeter");
-  //   delimeter.setAttribute("data-edit", true);
-  //   delimeter.textContent = sessionStorage.getItem("delimeter") ?? "|";
-  //   // разделитель
-  //   const phone = document.createElement("div");
-  //   phone.setAttribute("id", "phone");
-  //   phone.setAttribute("data-edit", true);
-  //   phone.textContent = sessionStorage.getItem("phone") ?? "+34 666 666 666";
 
-  //   contactContainer.appendChild(email);
-  //   contactContainer.appendChild(delimeter);
-  //   contactContainer.appendChild(phone);
   toolsBox.appendChild(title);
   toolsBox.appendChild(toolsContainer);
-  //   contactBox.appendChild(contactContainer);
-  //   contactBox.appendChild(contactContainer);
+
   return toolsBox;
 };
 export default ToolsBox;

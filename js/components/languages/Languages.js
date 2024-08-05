@@ -1,3 +1,4 @@
+import actionEffect from "../../actionEffect";
 import Title from "../title/Title";
 import "./style.css";
 
@@ -27,6 +28,7 @@ const Languages = () => {
     const newNameLanguage = document.createElement("div");
     newNameLanguage.setAttribute("id", key);
     newNameLanguage.setAttribute("data-edit", true);
+    actionEffect(newNameLanguage);
     newNameLanguage.textContent = sessionStorage.getItem(key) ?? key;
     // уровень
     const newLevelLanguage = document.createElement("div");

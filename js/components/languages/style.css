@@ -1,4 +1,3 @@
-
 #languages {
   min-width: 267px;
   flex: 1;
@@ -10,7 +9,6 @@
   border-radius: 12px;
   background-color: var(--container-bg-color);
 }
-
 
 #listLanguages {
   display: flex;
